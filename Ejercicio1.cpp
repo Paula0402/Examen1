@@ -5,20 +5,24 @@ int main() {
     int Cedula;
     char Nombre[50];
     int Tipo, HorasLaboradas, ContOperarios = 0, ContTecnicos = 0, ContProfesionales = 0;
-    double PrecioHora, SalarioOrdinario, Aumento, SalarioBruto, DeduccionCCSS, SalarioNeto;
+    double PrecioHora, SalarioOrdinario, Aumento, SalarioBruto, DeduccionCCSS, SalarioNeto, PromedioOperarios, PromedioTecnicos, PromedioProfesionales;
     double AcumSalarioOperarios = 0, AcumSalarioTecnicos = 0, AcumSalarioProfesionales = 0;
     char Continuar = 's';
 
     while (Continuar == 's' || Continuar == 'S') {
+    	
         printf("\nIngrese la cédula del empleado: ");
         scanf("%d", &Cedula);
 
         printf("Ingrese el nombre completo del empleado: ");
         scanf(" %[^\n]", Nombre);
+        
         printf("Ingrese el tipo de empleado (1-Operario, 2-Técnico, 3-Profesional): ");
         scanf("%d", &Tipo);
+        
         printf("Ingrese la cantidad de horas laboradas: ");
         scanf("%d", &HorasLaboradas);
+        
         printf("Ingrese el precio por hora: ");
         scanf("%lf", &PrecioHora);
 
@@ -64,7 +68,6 @@ int main() {
         scanf(" %c", &Continuar);
     }
 
-    double PromedioOperarios, PromedioTecnicos, PromedioProfesionales;
 
     if (ContOperarios > 0) {
         PromedioOperarios = AcumSalarioOperarios / ContOperarios;
