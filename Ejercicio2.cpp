@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int NumeroFactura, Localidad, CantidadEntradas;
-    int Cedula;
+    int NumeroFactura, Localidad, CantidadEntradas, Cedula;
     char Nombre[50];
     double PrecioEntrada, Subtotal, CargosServicios, TotalPagar;
     double AcumuladoLocalidad1 = 0, AcumuladoLocalidad2 = 0, AcumuladoLocalidad3 = 0;
@@ -65,7 +64,7 @@ int main() {
         TotalPagar = Subtotal + CargosServicios;
 
         printf("\nResultados de la venta:\n");
-        printf("Número de factura: %d\n", NumeroFactura);
+        printf("Número de factura: %d\n", NumeroFactura);	
         printf("Cédula: %d\n", Cedula);
         printf("Nombre del comprador: %s\n", Nombre);
         printf("Localidad: %d\n", Localidad);
